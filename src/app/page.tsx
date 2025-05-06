@@ -1,103 +1,79 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gray-50 text-gray-800 font-sans">
+      <header className="bg-blue-600 text-white py-6 text-center shadow-md">
+        <h1 className="text-4xl font-bold">My Online CV</h1>
+        <p className="text-lg">Web Developer | React & Next.js Enthusiast</p>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* About Section */}
+      <section id="about" className="p-8">
+        <h2 className="text-2xl font-bold mb-2">About Me</h2>
+        <p>
+          Saya adalah seorang pengembang web dengan semangat tinggi terhadap teknologi modern seperti React dan Next.js.
+          Fokus saya adalah membangun aplikasi web yang cepat, responsif, dan mudah digunakan.
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="p-8 bg-white">
+        <h2 className="text-2xl font-bold mb-2">Skills</h2>
+        <ul className="list-disc list-inside">
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Next.js</li>
+          <li>Tailwind CSS, Bootstrap</li>
+          <li>Git, GitHub</li>
+          <li>Node.js, Express</li>
+        </ul>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="p-8">
+        <h2 className="text-2xl font-bold mb-2">Services</h2>
+        <ul className="space-y-2">
+          <li>✅ Web Development</li>
+          <li>✅ Frontend UI Design</li>
+          <li>✅ Website Optimization</li>
+          <li>✅ Mobile-Responsive Design</li>
+        </ul>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="p-8 bg-white">
+        <h2 className="text-2xl font-bold mb-2">Portfolio</h2>
+        <div className="space-y-2">
+          <div>
+            <h3 className="font-semibold">📌 Project 1: Portfolio Website</h3>
+            <p>
+              Website pribadi yang menampilkan proyek dan skill saya.{' '}
+              <a href="https://github.com/username/project1" className="text-blue-500 underline" target="_blank">
+                View on GitHub
+              </a>
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold">📌 Project 2: Todo App</h3>
+            <p>
+              Aplikasi to-do berbasis React.{' '}
+              <a href="https://github.com/username/todo-app" className="text-blue-500 underline" target="_blank">
+                View on GitHub
+              </a>
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="p-8">
+        <h2 className="text-2xl font-bold mb-2">Contact</h2>
+        <p>Email: <a href="mailto:youremail@example.com" className="text-blue-500">youremail@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" className="text-blue-500" target="_blank">yourprofile</a></p>
+        <p>WhatsApp: 0812-xxxx-xxxx</p>
+      </section>
+
+      <footer className="bg-gray-200 text-center py-4 mt-12">
+        <p>© 2025 Your Name. All rights reserved.</p>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
